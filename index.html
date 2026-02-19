@@ -1,261 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Note System — Messaging Policy</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=DM+Sans:wght@400;500&display=swap');
-
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --ink: #1a1a1a;
-            --paper: #faf9f7;
-            --muted: #6b6560;
-            --rule: #ddd7d0;
-            --accent: #8b6f4e;
-            --section-bg: #f3f1ee;
-        }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            color: var(--ink);
-            background: var(--paper);
-            line-height: 1.7;
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 60px 24px 80px;
-        }
-
-        header {
-            margin-bottom: 56px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid var(--rule);
-        }
-
-        h1 {
-            font-family: 'Source Serif 4', serif;
-            font-size: 2rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
-            color: var(--ink);
-        }
-
-        header p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        h2 {
-            font-family: 'Source Serif 4', serif;
-            font-size: 1.35rem;
-            font-weight: 600;
-            margin-top: 48px;
-            margin-bottom: 16px;
-            color: var(--ink);
-            letter-spacing: -0.01em;
-        }
-
-        h3 {
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--accent);
-            margin-top: 32px;
-            margin-bottom: 12px;
-        }
-
-        p {
-            margin-bottom: 16px;
-            color: #2c2c2c;
-        }
-
-        ul {
-            margin-bottom: 16px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            color: #2c2c2c;
-        }
-
-        li::marker {
-            color: var(--accent);
-        }
-
-        .callout {
-            background: var(--section-bg);
-            border-left: 3px solid var(--accent);
-            padding: 20px 24px;
-            border-radius: 0 6px 6px 0;
-            margin: 24px 0;
-        }
-
-        .callout p {
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
-
-        .divider {
-            border: none;
-            border-top: 1px solid var(--rule);
-            margin: 48px 0;
-        }
-
-        footer {
-            margin-top: 56px;
-            padding-top: 24px;
-            border-top: 1px solid var(--rule);
-            color: var(--muted);
-            font-size: 0.85rem;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: underline;
-            text-decoration-color: rgba(139, 111, 78, 0.3);
-            text-underline-offset: 3px;
-        }
-
-        a:hover {
-            text-decoration-color: var(--accent);
-        }
-
-        .keyword {
-            display: inline-block;
-            background: var(--section-bg);
-            padding: 2px 10px;
-            border-radius: 4px;
-            font-family: 'DM Mono', monospace, monospace;
-            font-size: 0.9rem;
-            color: var(--accent);
-        }
-
-        @media (max-width: 600px) {
-            .container { padding: 40px 18px 60px; }
-            h1 { font-size: 1.6rem; }
-            h2 { font-size: 1.2rem; }
-        }
-    </style>
+<title>Personal Note System - Messaging Consent</title>
+<style>
+body { font-family: -apple-system, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+h1 { font-size: 1.4em; }
+form { background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0; }
+label { display: block; margin: 10px 0 5px; }
+input[type="tel"] { padding: 8px; width: 100%; box-sizing: border-box; font-size: 1em; }
+button { background: #333; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px; font-size: 1em; }
+.consent-check { margin: 15px 0; }
+</style>
 </head>
 <body>
-    <div class="container">
+<h1>Personal Note System — Messaging Consent</h1>
 
-        <header>
-            <h1>Personal Note System</h1>
-            <p>Messaging Policy &middot; Privacy Policy &middot; Terms of Use</p>
-        </header>
+<p>This toll-free number is used exclusively as a personal productivity tool by its sole owner and operator, Philip McShurley. By opting in below, you consent to receive automated SMS messages from this number.</p>
 
-        <!-- ==================== ABOUT ==================== -->
+<form onsubmit="alert('Consent recorded. You may now use the SMS Note System.'); return false;">
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" placeholder="+1 (555) 555-5555" required>
 
-        <h2>About This Service</h2>
-        <p>Personal Note System is a private, self-hosted knowledge management tool operated by an individual (the "sole proprietor") for personal use only. The system allows the sole proprietor to send text messages and photos to a dedicated phone number, where they are automatically categorized, analyzed, and stored for later retrieval. The system also provides scheduled reminders and task management via SMS.</p>
+  <div class="consent-check">
+    <input type="checkbox" id="consent" required>
+    <label for="consent" style="display:inline;">I agree to receive automated SMS messages including note confirmations, reminders, and task notifications from the Personal Note System. Message frequency varies (estimated under 500/month). Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help.</label>
+  </div>
 
-        <div class="callout">
-            <p>This is a personal productivity tool. Only the sole proprietor sends and receives messages through this system. No marketing messages, promotional content, or third-party communications are sent.</p>
-        </div>
+  <button type="submit">Opt In</button>
+</form>
 
-        <!-- ==================== MESSAGING DISCLOSURE ==================== -->
+<h2>Message Details</h2>
+<ul>
+<li>Message frequency varies based on personal use</li>
+<li>Message and data rates may apply</li>
+<li>Reply STOP at any time to unsubscribe from all messages</li>
+<li>Reply HELP for assistance</li>
+</ul>
 
-        <h2>Messaging Disclosure</h2>
-
-        <h3>What messages are sent</h3>
-        <p>The system sends the following types of SMS messages to the sole proprietor:</p>
-        <ul>
-            <li>Confirmation replies when a note is received and categorized</li>
-            <li>Scheduled reminder notifications at times requested by the sole proprietor</li>
-            <li>Task and to-do confirmations</li>
-            <li>Search results when queried</li>
-            <li>System status updates when requested</li>
-        </ul>
-
-        <h3>Message frequency</h3>
-        <p>Message frequency varies based on the sole proprietor's usage. Typical usage is fewer than 20 messages per day. Messages are only sent in response to the sole proprietor's inbound texts or at times explicitly scheduled by the sole proprietor.</p>
-
-        <h3>Consent</h3>
-        <p>The sole proprietor is the only user of this system. Consent is established by the sole proprietor's direct action of creating, configuring, and operating the system, and by initiating all inbound conversations. No other individuals are enrolled in or receive messages from this system.</p>
-
-        <h3>Opt-out</h3>
-        <p>The sole proprietor may stop receiving messages at any time by texting <span class="keyword">STOP</span> to the system's phone number. To resume, text <span class="keyword">START</span>.</p>
-
-        <h3>Help</h3>
-        <p>Text <span class="keyword">HELP</span> for assistance. For additional support, contact the account owner directly.</p>
-
-        <h3>Message and data rates</h3>
-        <p>Message and data rates may apply. Consult your mobile carrier for details on your messaging plan.</p>
-
-        <hr class="divider">
-
-        <!-- ==================== PRIVACY POLICY ==================== -->
-
-        <h2>Privacy Policy</h2>
-        <p><em>Last updated: February 2026</em></p>
-
-        <h3>Information collected</h3>
-        <p>This system processes the following information, all of which is provided directly by the sole proprietor:</p>
-        <ul>
-            <li>Text message content sent to the system</li>
-            <li>Photos and images sent to the system</li>
-            <li>Phone number of the sender (sole proprietor only)</li>
-            <li>Timestamps of messages</li>
-        </ul>
-
-        <h3>How information is used</h3>
-        <p>All information is used solely for the purpose of categorizing, storing, and retrieving the sole proprietor's personal notes and managing reminders. Note content is processed by the Anthropic Claude API for analysis and categorization, then stored in a private GitHub repository accessible only to the sole proprietor.</p>
-
-        <h3>Data sharing</h3>
-        <p>No personal information or note content is sold, shared, or disclosed to any third parties, except as necessary for the technical operation of the system:</p>
-        <ul>
-            <li><strong>Twilio</strong> — processes SMS messages (subject to <a href="https://www.twilio.com/legal/privacy" target="_blank">Twilio's Privacy Statement</a>)</li>
-            <li><strong>Anthropic</strong> — processes note content for AI analysis (subject to <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic's Privacy Policy</a>)</li>
-            <li><strong>GitHub</strong> — stores notes in a private repository (subject to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">GitHub's Privacy Statement</a>)</li>
-        </ul>
-
-        <h3>Data retention</h3>
-        <p>Notes are retained indefinitely in the sole proprietor's private repository until manually deleted. The sole proprietor has full control over all stored data and can delete any or all notes at any time.</p>
-
-        <h3>Security</h3>
-        <p>All data is stored in a private GitHub repository with access restricted to the sole proprietor via personal access token. The server application is secured with environment-based credentials and Twilio request validation.</p>
-
-        <hr class="divider">
-
-        <!-- ==================== TERMS OF USE ==================== -->
-
-        <h2>Terms of Use</h2>
-        <p><em>Last updated: February 2026</em></p>
-
-        <p>This system is a personal tool operated by and for the sole proprietor. By using this system, the sole proprietor acknowledges the following:</p>
-
-        <ul>
-            <li>The system is provided as-is for personal knowledge management and productivity purposes.</li>
-            <li>Note content is processed by third-party services (Twilio, Anthropic, GitHub) subject to their respective terms of service.</li>
-            <li>The sole proprietor is responsible for the content of all messages sent to and from the system.</li>
-            <li>The system is not intended for use by anyone other than the sole proprietor.</li>
-            <li>Standard message and data rates from the sole proprietor's mobile carrier may apply.</li>
-        </ul>
-
-        <hr class="divider">
-
-        <!-- ==================== CONTACT ==================== -->
-
-        <h2>Contact</h2>
-        <p>For questions about this policy or this messaging service, contact the account owner directly.</p>
-
-        <!-- ==================== FOOTER ==================== -->
-
-        <footer>
-            <p>&copy; 2026 Personal Note System. This is a private, personal-use application.</p>
-        </footer>
-
-    </div>
+<h2>Contact</h2>
+<p>Philip McShurley — philnorth123@gmail.com</p>
 </body>
 </html>
